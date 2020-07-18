@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+{% block contents %}
+<h1>{{title}}</h1>
+<!-- {{request.user}}
+{{request.path}}
+{{user}} -->
+<!-- {{user.is_authenticated}}
+{{user.is_staff}} -->
+<!-- {%if user.is_authenticated %}
+<h1>user only data</h1> -->
+<!-- {% for a in my_list%}
+   <li>{{a}}</li>
+{% endfor %} -->
+<!-- {% endif %} -->
+{% for a in blog_list %}
+  {% include "blog/list_inline.html" with blog_post=a %}
+{% endfor %}
+{% endblock%}
